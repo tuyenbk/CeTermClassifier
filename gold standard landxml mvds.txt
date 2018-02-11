@@ -1,0 +1,188 @@
+<!--gold standard landxml mvds by disciplines/asset types
+//rule of thumb: 50 test queries,
+//test queries are derived from the chapter namesof a Highway Design Manual(or the department names of a State DOT)
+//test queries include single or multi-word terms. Single-word keywords are more generic concepts than multiple-word ones.
+//'material' class in landxml is not about material
+// 10 queries representing different domain of interests, divisions, players of a transportation agencies that are coverd in the current version of Landxml were slected, including: traffic and safety, hydraulics, pavement, surface model, alignment -->
+
+<!--Survey -->
+
+<!--query 1-->
+<xs:mvd mvdName="standard model view defition">
+<mvd query = "surface model">
+	<landxmlNode landxmlNode = "LandXML-->Survey"/>	
+	<landxmlNode landxmlNode = "Survey-->GPSPosition"/>	
+	<landxmlNode landxmlNode = "Survey-->SurveyHeader"/>
+	<landxmlNode landxmlNode = "SurveyHeader-->PurposeOfSurvey"/>
+	<landxmlNode landxmlNode = "SurveyHeader-->MapPoint"/>
+	<landxmlNode landxmlNode = "SurveyHeader-->SurveyorCertificate"/>
+	<landxmlNode landxmlNode = "Survey-->ObservationGroup"/>
+	<landxmlNode landxmlNode = "ObservationGroup-->RedVerticalObservation"/>
+	<landxmlNode landxmlNode = "ObservationGroup-->RedHorizontalPosition"/>
+	<landxmlNode landxmlNode = "ObservationGroup-->ReducedObservation"/>
+	<landxmlNode landxmlNode = "ObservationGroup-->ReducedArcObservation"/>
+	<landxmlNode landxmlNode = "Survey-->Equipment"/>
+	<landxmlNode landxmlNode = "Survey-->InstrumentSetup"/>
+	<landxmlNode landxmlNode = "LandXML-->Monuments"/>	
+	<landxmlNode landxmlNode = "Monuments-->Monument"/>	
+	<landxmlNode landxmlNode = "Survey-->SurveyMonument"/>	
+	<landxmlNode landxmlNode = "Survey-->GPSPosition"/>	
+	<landxmlNode landxmlNode = "Survey-->ControlChecks"/>	
+	<landxmlNode landxmlNode = "Survey-->SurveyMonument"/>	
+	<landxmlNode landxmlNode = "Survey-->LaserSetup"/>	
+	<landxmlNode landxmlNode = "LandXML-->GradeModel"/>	
+	<landxmlNode landxmlNode = "GradeModel-->GradeSurface"/>
+	<landxmlNode landxmlNode = "LandXML-->Surfaces"/>
+	<landxmlNode landxmlNode = "Surfaces-->Surface"/>
+	<landxmlNode landxmlNode = "Surface-->SourceData"/>
+	<landxmlNode landxmlNode = "SourceData-->DataPoints"/>
+	<landxmlNode landxmlNode = "Surface-->Definition"/>
+	<landxmlNode landxmlNode = "LandXML-->CoordinateSystem"/>
+	<landxmlNode landxmlNode = "CoordinateSystem-->CoordinateSystem/@datum"/>
+	<landxmlNode landxmlNode = "LandXML-->CgPoints"/>
+	<landxmlNode landxmlNode = "CgPoints-->CgPoint"/>
+	<!--<landxmlNode landxmlNode = "GradeSurface->GradeSurface/@surfaceRef"/>
+	<landxmlNode landxmlNode = "GradeSurface->GradeSurface/@surfaceRefs"/> 
+	<landxmlNode landxmlNode = "GradeSurface->GradeSurface/@cgPointRefs"/> -->
+</mvd>
+
+<!--Roadway Engineering -->
+
+
+
+<!--query 3-->
+<mvd query = "alignment">
+	<landxmlNode landxmlNode = "LandXML-->Alignments"/>
+	<landxmlNode landxmlNode = "Alignments-->Alignment"/>
+	<!--<landxmlNode landxmlNode = "LandXML->Roadways"/>
+	<landxmlNode landxmlNode = "Roadways->Roadway"/>
+	<landxmlNode landxmlNode = "Roadway->Roadway/@alignmentRefs"/> -->
+</mvd>
+
+<!--query 4-->
+<mvd query = "roadside">
+	<landxmlNode landxmlNode = "LandXML-->Roadways"/>
+	<landxmlNode landxmlNode = "Roadways-->Roadway"/>
+	<landxmlNode landxmlNode = "Roadway-->Roadside"/>
+	<landxmlNode landxmlNode = "LandXML-->GradeModel"/>
+	<landxmlNode landxmlNode = "GradeModel-->GradeSurface"/>
+	<landxmlNode landxmlNode = "GradeSurface-->Zones"/>
+	<landxmlNode landxmlNode = "Zones-->Zone"/>
+</mvd>
+
+<!--query 5-->
+<mvd query = "pavement">
+	<landxmlNode landxmlNode = "LandXML-->GradeModel"/>
+	<landxmlNode landxmlNode = "GradeModel-->GradeSurface"/>
+	<landxmlNode landxmlNode = "GradeSurface-->Zones"/>
+	<landxmlNode landxmlNode = "Zones-->Zone"/>
+</mvd>
+
+<!--query 6-->
+<mvd query = "bridge">
+	<landxmlNode landxmlNode = "LandXML-->Roadways"/>
+	<landxmlNode landxmlNode = "Roadways-->Roadway"/>
+	<landxmlNode landxmlNode = "Roadway-->BridgeElement"/>
+	<landxmlNode landxmlNode = "LandXML-->GradeModel"/>
+	<landxmlNode landxmlNode = "GradeModel-->GradeSurface"/>
+	<landxmlNode landxmlNode = "GradeSurface-->Zones"/>
+	<landxmlNode landxmlNode = "Zones-->Zone"/>
+	<!--<landxmlNode landxmlNode = "Zone->Zone/@category"/>
+	<landxmlNode landxmlNode = "Zone/@category->zoneCategoryType"/>
+	<landxmlNode landxmlNode = "zoneCategoryType->bridge abutment"/> -->
+</mvd>
+
+<!--query 7-->
+<mvd query = "drainage">
+	<landxmlNode landxmlNode = "LandXML-->Roadways"/>
+	<landxmlNode landxmlNode = "Roadways-->Roadway"/>
+	<landxmlNode landxmlNode = "Roadways-->Roaside"/>
+	<landxmlNode landxmlNode = "Roadside-->Ditch"/>
+	<landxmlNode landxmlNode = "LandXML-->PipeNetworks"/>
+	<landxmlNode landxmlNode = "PipeNetworks-->PipeNetwork"/>
+	<landxmlNode landxmlNode = "PipeNetwork-->Pipes"/>
+	<landxmlNode landxmlNode = "PipeNetwork-->Structs"/>
+	<landxmlNode landxmlNode = "Structs-->Struct"/>
+	<landxmlNode landxmlNode = "LandXML-->Surfaces"/>
+	<landxmlNode landxmlNode = "Surfaces-->Surface"/>
+	<landxmlNode landxmlNode = "Surface-->WaterSheds"/>
+	<landxmlNode landxmlNode = "WaterSheds-->WaterShed"/>
+	<landxmlNode landxmlNode = "WaterShed-->Outlet"/>
+	<landxmlNode landxmlNode = "LandXML-->GradeModel"/>
+	<landxmlNode landxmlNode = "GradeModel-->GradeSurface"/>
+	<landxmlNode landxmlNode = "GradeSurface-->Zones"/>
+	<landxmlNode landxmlNode = "Zones-->Zone"/>
+	<!--<landxmlNode landxmlNode = "Zone->Zone/@category"/>
+	<landxmlNode landxmlNode = "Zone/@category->zoneCategoryType"/>
+	<landxmlNode landxmlNode = "zoneCategoryType->ditch"/>-->
+</mvd>
+
+<!--query 8-->
+<mvd query = "traffic">
+	<landxmlNode landxmlNode = "LandXML-->Roadways"/>
+	<landxmlNode landxmlNode = "Roadways-->Roadway"/>
+	<landxmlNode landxmlNode = "Roadways-->Intersections"/>
+	<landxmlNode landxmlNode = "Intersections-->Intersection"/>
+	<landxmlNode landxmlNode = "Intersection-->TrafficControl"/>
+	<landxmlNode landxmlNode = "Intersection-->TurnRestriction"/>
+	<landxmlNode landxmlNode = "Intersection-->Timing"/>
+	<landxmlNode landxmlNode = "Intersection-->Volume"/>
+	<landxmlNode landxmlNode = "Intersection-->TurnSpeed"/>
+	<landxmlNode landxmlNode = "Roadway-->Lanes"/>
+	<landxmlNode landxmlNode = "Lanes-->ThruLane"/>
+	<landxmlNode landxmlNode = "Lanes-->TurnLane"/>
+	<landxmlNode landxmlNode = "Lanes-->PassingLane"/>
+	<landxmlNode landxmlNode = "Lanes-->TwoWayLeftTurnLane"/>
+	<landxmlNode landxmlNode = "Lanes-->ClimbLane"/>
+	<landxmlNode landxmlNode = "Lanes-->OffsetLane"/>
+	<landxmlNode landxmlNode = "Lanes-->WideningLane"/>	
+	<landxmlNode landxmlNode = "Roadway-->TrafficVolume"/>
+	<landxmlNode landxmlNode = "TrafficVolume-->PeakHour"/>
+	<landxmlNode landxmlNode = "TrafficVolume-->DesignHour"/>
+	<landxmlNode landxmlNode = "Roadway-->Roadside"/>
+	<landxmlNode landxmlNode = "Roadside-->RoadSign"/>
+	<landxmlNode landxmlNode = "Roadway-->Speeds"/>	
+	<landxmlNode landxmlNode = "Speeds-->DesignSpeed"/>	
+	<landxmlNode landxmlNode = "Speeds-->DesignSpeed85th"/>	
+	<landxmlNode landxmlNode = "Speeds-->PostedSpeed"/>	
+	<landxmlNode landxmlNode = "Roadway-->CrashData"/>
+	<landxmlNode landxmlNode = "CrashData-->CrashHistory"/>
+	<!--<landxmlNode landxmlNode = "TrafficVolume->DesignHour"/>
+	<landxmlNode landxmlNode = "DesignHour->DesignHour/@volume"/>
+		-->
+	
+</mvd>
+
+ </xs:mvd>
+<!-- keyword="cross section element" landxmlNodes={Curb, Ditch,longitudinal barrier,Lane,Shoulder}
+keyword="typical section"
+keyword="horizontal and vertical design"{Alignment}
+keyword="intersection" landxmlNodes={Intersection}
+keyword="pavement" landxmlNodes={DesignCrossSectSurf,ZoneMaterial}
+keyword="roadside" landxmlNodes={RoadSide,DrainageFacilities,Rail,Sign,SideWalk,BicycleFacilities}
+//Bridge structure
+keyword="bridge" landxmlNodes={BridgeElement,zoneCategory}
+//Bicycle and pedestrian
+keyword="walkway" landxmlNodes={Sidewalk,Curb,WarningSign,Intersection}	
+keyword="bikeway" landxmlNodes={BikeFacilities}	
+//Right of way
+keyword="row" landxmlNodes={Parcel}
+keyword="land use" landxmlNodes={}
+//Hydraulics design
+keyword="hydraulics" landxmlNodes={pipeNetwork,Ditch,WaterShed}
+keyword="roadway drainage" landxmlNodes={pipeNetwork,Ditch,WaterShed}	
+keyword="subsurface drainage" landxmlNodes={pipeNetwork,Ditch,WaterShed}	
+keyword="surface drainage" landxmlNodes={pipeNetwork,Ditch,WaterShed}		
+//Traffic control & safety
+keyword="traffic" landxmlNodes={lanes,roadsign,TrafficControl,CrashData}
+keyword="traffic lane" landxmlNodes={lanes,SideWalk}
+keyword="traffic sign" landxmlNodes={RoadSign}
+keyword="traffic signal" landxmlNodes={TrafficControl,Intersection}
+keyword="traffic structure" landxmlNodes={RoadSign}
+keyword="traffic safety" landxmlNodes={CrashData}
+keyword="traffic line" or "pavement marking"
+//office of construction 
+keyword="material" landxmlNodes={Pipe,Zone,DesignCrossSectSurf,MaterialType}
+//Office of contracts (out of Landxml Schema)-->
+
+
